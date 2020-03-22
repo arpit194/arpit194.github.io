@@ -1,0 +1,124 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 1;
+}
+
+.nav-item {
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.nav-item:hover {
+    background-color: rgba(223, 230, 233, 0.25);
+}
+
+.navbar-brand {
+    font-size: 5vh;
+    color: #fff;
+}
+
+.navbar-brand:hover {
+    color: #fff;
+}
+
+.nav-link {
+    font-size: 2.5vh;
+    color: #fff;
+}
+
+.nav-link:hover {
+    color: #fff;
+}
+
+.menuIcon {
+    color: white;
+}
+
+.cover-container {
+    height: 100%;
+    background-image: linear-gradient(to bottom right, #1e3c72, #333399, #B24592);
+}
+
+.cover-content {
+    height: 100%;
+    color: #fff;
+}
+
+.cover-heading {
+    font-size: 10vh;
+}
+
+.cover-sub {
+    font-size: 4vh;
+}
+
+.cover-background {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/cover1.jpg');
+    background-size: cover;
+    opacity: 0.4;
+}
+
+.social-button {
+    font-size: 2.5vh;
+    color: #fff;
+}
+
+.social-button:hover {
+    font-size: 3vh;
+    color: rgba(9, 132, 227, 1.0);
+}
+
+.vertical-center {
+    margin: auto 0;
+}
+
+.horizontal-center {
+    margin: 0 auto;
+}
+
+.center {
+    margin: auto;
+}
+
+.flex {
+    display: flex;
+}
+
+@media screen and (max-width: 768px) {
+    .cover-heading {
+        font-size: 4vh;
+    }
+
+    .cover-sub {
+        font-size: 2.5vh;
+    }
+
+    .social-button {
+        font-size: 2vh;
+        color: #fff;
+    }
+
+    .social-button:hover {
+        font-size: 2.5vh;
+        color: rgba(9, 132, 227, 1.0);
+    }
+}
