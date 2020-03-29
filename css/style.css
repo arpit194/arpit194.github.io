@@ -6,6 +6,22 @@ body {
     height: 100%;
 }
 
+#loading {
+    margin: auto;
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: white;
+    display: flex;
+    z-index: 3;
+}
+
 header {
     display: flex;
     flex-direction: column;
@@ -19,10 +35,21 @@ header {
 .nav-item {
     border-radius: 5px;
     padding: 10px 20px;
+    transition: 0.5s;
+}
+
+.nav-item>a {
+    font-size: 2.5vh;
+    color: rgba(189, 195, 199, 1.0);
+    transition: 0.5s;
 }
 
 .nav-item:hover {
     background-color: rgba(223, 230, 233, 0.25);
+}
+
+.nav-item:hover>a {
+    color: rgba(255, 255, 255, 1.0);
 }
 
 .navbar-brand {
@@ -31,15 +58,6 @@ header {
 }
 
 .navbar-brand:hover {
-    color: #fff;
-}
-
-.nav-link {
-    font-size: 2.5vh;
-    color: #fff;
-}
-
-.nav-link:hover {
     color: #fff;
 }
 
@@ -80,11 +98,43 @@ header {
 .social-button {
     font-size: 2.5vh;
     color: #fff;
+    transition: 0.5s;
 }
 
 .social-button:hover {
-    font-size: 3vh;
-    color: rgba(9, 132, 227, 1.0);
+    font-size: 4vh;
+    color: rgba(116, 185, 255, 1.0);
+}
+
+.language-container {
+    flex-direction: column;
+}
+
+.language-heading {
+    font-size: 7vh;
+    color: rgba(44, 62, 80, 1.0);
+    padding: 10%;
+}
+
+.language-content {
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.language {
+    font-size: 20vh;
+    flex-direction: column;
+    /* width: 19%; */
+    padding: 5% 0px;
+    margin: 2% 0%;
+    background-color: aqua;
+    border: 20% solid;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px #999;
+}
+
+.language-name {
+    font-size: 7vh;
 }
 
 .vertical-center {
@@ -104,6 +154,11 @@ header {
 }
 
 @media screen and (max-width: 768px) {
+    .menuIcon {
+        color: white;
+        font-size: 3vh;
+    }
+
     .cover-heading {
         font-size: 4vh;
     }
@@ -120,5 +175,60 @@ header {
     .social-button:hover {
         font-size: 2.5vh;
         color: rgba(9, 132, 227, 1.0);
+    }
+
+    .language-heading {
+        font-size: 3vh;
+        color: rgba(44, 62, 80, 1.0);
+        padding: 10%;
+    }
+
+    .language {
+        font-size: 15vh;
+        flex-direction: column;
+    }
+
+    .language-name {
+        font-size: 2.5vh;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    .menuIcon {
+        color: white;
+        font-size: 4vh;
+    }
+
+    .cover-heading {
+        font-size: 6vh;
+    }
+
+    .cover-sub {
+        font-size: 3vh;
+    }
+
+    .social-button {
+        font-size: 3vh;
+        color: #fff;
+    }
+
+    .social-button:hover {
+        font-size: 3vh;
+        color: rgba(9, 132, 227, 1.0);
+    }
+
+    .language-heading {
+        font-size: 3.5vh;
+        color: rgba(44, 62, 80, 1.0);
+        padding: 10%;
+    }
+
+    .language {
+        font-size: 15vh;
+        flex-direction: column;
+    }
+
+    .language-name {
+        font-size: 4vh;
     }
 }
