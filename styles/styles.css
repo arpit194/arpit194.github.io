@@ -1,0 +1,54 @@
+:root {
+  --purple: #7678ed;
+  --dark: #222;
+  --light: #fff;
+}
+
+.nav {
+  background-color: rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: 75px;
+  padding: 10px 50px;
+  display: flex;
+  position: fixed;
+  color: var(--light);
+  transition: 0.25s;
+}
+
+.scrolled {
+  background-color: var(--purple);
+}
+
+.nav img {
+  height: 100%;
+  background-color: var(--light);
+  border-radius: 10%;
+}
+
+.nav-links {
+  display: flex;
+  margin-left: auto;
+}
+
+.nav-link {
+  margin: auto;
+  padding: 0px 10px;
+  transition: 0.25s;
+}
+
+.nav-link:hover {
+  border-bottom: 2px solid var(--light);
+  padding-bottom: 5px;
+}
+
+main {
+  height: 100%;
+}
+
+section {
+  height: 100%;
+}
+
+.home {
+  background-color: var(--purple);
+}
