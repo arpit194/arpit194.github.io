@@ -1,32 +1,202 @@
 <!DOCTYPE html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Arpit Patel</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" type="text/css" href="styles/reset.css">
-        <link rel="stylesheet" type="text/css" href="styles/styles.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="js/index.js"></script>
-    </head>
-    <body>
-        <nav class="nav">
-            <img src="images/AP_logo.png" alt="Logo">
-            <div class="nav-links">
-                <div class="nav-link"><a href="#home">Home</a></div>
-                <div class="nav-link"><a href="#skills">Skills</a></div>
-                <div class="nav-link"><a href="#projects">Projects</a></div>
-                <div class="nav-link"><a href="#experience">Experience</a></div>
-                <div class="nav-link"><a href="#contact">Contact</a></div>
+
+<head>
+    <script src="https://kit.fontawesome.com/eaa48fb1c0.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Arpit Patel</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="styles/reset.css">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
+
+<body>
+    <nav class="nav">
+        <img src="images/AP_logo.png" alt="Logo">
+        <span class="brand-name">{ Arpit Patel }</span>
+        <div class="nav-links">
+            <div class="nav-link homeLink active"><a href="#home">Home</a></div>
+            <div class="nav-link skillsLink"><a href="#skills">Skills</a></div>
+            <div class="nav-link projectsLink"><a href="#projects">Projects</a></div>
+            <div class="nav-link expLink"><a href="#experience">Experience</a></div>
+            <div class="nav-link contactLink"><a href="#contact">Contact</a></div>
+        </div>
+    </nav>
+    <main class="snap">
+        <section id="home" class="home reveal">
+            <div class="home-content">
+                <div class="header">Hi, I'm Arpit Patel</div>
+                <div class="content">I am a Full Stack Web Developer. I have experience in developing web application
+                    using JavaScript, React, NodeJs. I have been using these technologies for 2 years.</div>
+                <div class="socials">
+                    <a href="https://github.com/arpit194" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/arpitpatel194/" target="_blank"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                    <a href="mailto:arpit.patel194@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://www.instagram.com/arpitpatel194/" target="_blank"><i
+                            class="fa-brands fa-instagram"></i></a>
+                </div>
+                <div class="buttons">
+                    <button>Contact</button>
+                    <button>Resume</button>
+                </div>
             </div>
-        </nav>
-        <main>
-            <section id="home" class="home">Home</section>
-            <section id="skills" class="skills">Skills</section>
-            <section id="projects" class="projects">Projects</section>
-            <section id="experience" class="experience">Experience</section>
-            <section id="contact" class="contact">Contact</section>
-        </main>
-    </body>
+        </section>
+        <section id="skills" class="skills">
+            <div class="skills-content">
+                <div class="skills-header">Skills</div>
+                <div class="skill-container">
+                    <i class="fa-brands fa-html5"></i>
+                    <div class="skill-back">
+                        <div class="skill-fill html"></div>
+                    </div>
+                </div>
+                <div class="skill-container">
+                    <i class="fa-brands fa-css3"></i>
+                    <div class="skill-back">
+                        <div class="skill-fill css"></div>
+                    </div>
+                </div>
+                <div class="skill-container">
+                    <i class="fa-brands fa-js-square"></i>
+                    <div class="skill-back">
+                        <div class="skill-fill js"></div>
+                    </div>
+                </div>
+                <div class="skill-container">
+                    <i class="fa-brands fa-react"></i>
+                    <div class="skill-back">
+                        <div class="skill-fill react"></div>
+                    </div>
+                </div>
+                <div class="skill-container">
+                    <i class="fa-brands fa-node-js"></i>
+                    <div class="skill-back">
+                        <div class="skill-fill node"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="education-container">
+                <div class="skills-header">Education</div>
+                <div class="education-content">
+                    <div class="education-header">JECRC University</div>
+                    <div>B.Tech in Computer Science</div>
+                    <div>2016 - 2020</div>
+                    <div>8.4 CGPA</div>
+                </div>
+                <div class="education-content">
+                    <div class="education-header">Mittal International School</div>
+                    <div>12th</div>
+                    <div>2015</div>
+                    <div>67%</div>
+                </div>
+                <div class="education-content">
+                    <div class="education-header">Spirngwood Senior Secondary School</div>
+                    <div>10th</div>
+                    <div>2013</div>
+                    <div>9.4 CGPA</div>
+                </div>
+            </div>
+        </section>
+        <section id="projects" class="projects">
+            <div class="projects-container">
+                <!-- Small Projects -->
+                <div class="projects-content">
+                    <div class="project-header">Small Projects</div>
+                    <div class="project-content">
+                        <div class="project-card">
+                            <div class="project-image" style="background-image: url('images/onboarding.png')"></div>
+                            <div class="project-title">Onboarding Form</div>
+                            <div class="project-description">A multi step form created using React</div>
+                            <div class="small-buttons">
+                                <a href="https://arpit194.github.io/OnboardingForm" target="_blank"><i class="fa-brands fa-safari"></i></a>
+                                <a href="https://github.com/arpit194/OnboardingForm" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-image" style="background-image: url('images/socials.png')"></div>
+                            <div class="project-title">Social Buttons</div>
+                            <div class="project-description">A widget to help users share your website page on social media made using React</div>
+                            <div class="small-buttons">
+                                <a href="https://arpit194.github.io/SocialButtons" target="_blank"><i class="fa-brands fa-safari"></i></a>
+                                <a href="https://github.com/arpit194/SocialButtons" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-image" style="background-image: url('images/matchpairs.png')"></div>
+                            <div class="project-title">Match Pair</div>
+                            <div class="project-description">A card matching memory game</div>
+                            <div class="small-buttons">
+                                <a href="https://arpit194.github.io/MatchPair" target="_blank"><i class="fa-brands fa-safari"></i></a>
+                                <a href="https://github.com/arpit194/MatchPair" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-image" style="background-image: url('images/rolldice.png')"></div>
+                            <div class="project-title">Roll Dice</div>
+                            <div class="project-description">A simple dice roll to help you play your favourite board games anytime</div>
+                            <div class="small-buttons">
+                                <a href="https://arpit194.github.io/RollDice" target="_blank"><i class="fa-brands fa-safari"></i></a>
+                                <a href="https://github.com/arpit194/RollDice" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Big Projects -->
+                <div class="projects-content">
+                    <div class="project-header">Big Projects</div>
+                    <div class="project-content">
+                        <div class="project-card">
+                            <div class="project-image"></div>
+                            <hr>
+                            <div class="project-title">Roll Dice</div>
+                            <div class="project-description">A simple dice roll to help you play your favourite board games anytime</div>
+                            <div class="small-buttons">
+                                <a href="https://arpit194.github.io/RollDice" target="_blank"><i class="fa-brands fa-safari"></i></a>
+                                <a href="https://github.com/arpit194/RollDice" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-image"></div>
+                            <hr>
+                            <div class="project-title">Roll Dice</div>
+                            <div class="project-description">A simple dice roll to help you play your favourite board games anytime</div>
+                            <div class="small-buttons">
+                                <a href="https://arpit194.github.io/RollDice" target="_blank"><i class="fa-brands fa-safari"></i></a>
+                                <a href="https://github.com/arpit194/RollDice" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-image"></div>
+                            <hr>
+                            <div class="project-title">Roll Dice</div>
+                            <div class="project-description">A simple dice roll to help you play your favourite board games anytime</div>
+                            <div class="small-buttons">
+                                <a href="https://arpit194.github.io/RollDice" target="_blank"><i class="fa-brands fa-safari"></i></a>
+                                <a href="https://github.com/arpit194/RollDice" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-image"></div>
+                            <hr>
+                            <div class="project-title">Roll Dice</div>
+                            <div class="project-description">A simple dice roll to help you play your favourite board games anytime</div>
+                            <div class="small-buttons">
+                                <a href="https://arpit194.github.io/RollDice" target="_blank"><i class="fa-brands fa-safari"></i></a>
+                                <a href="https://github.com/arpit194/RollDice" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="experience" class="experience">Experience</section>
+        <section id="contact" class="contact">Contact</section>
+    </main>
+</body>
+
 </html>

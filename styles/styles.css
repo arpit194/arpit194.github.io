@@ -4,8 +4,17 @@
   --light: #fff;
 }
 
+@keyframes reveal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .nav {
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: transparent;
   width: 100%;
   height: 75px;
   padding: 10px 50px;
@@ -13,6 +22,11 @@
   position: fixed;
   color: var(--light);
   transition: 0.25s;
+  z-index: 1;
+}
+
+.scrolledSome {
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
 .scrolled {
@@ -25,9 +39,16 @@
   border-radius: 10%;
 }
 
+.brand-name {
+  line-height: 35px;
+  font-size: 35px;
+  margin: auto 20px;
+}
+
 .nav-links {
   display: flex;
   margin-left: auto;
+  font-size: 20px;
 }
 
 .nav-link {
@@ -37,18 +58,272 @@
 }
 
 .nav-link:hover {
-  border-bottom: 2px solid var(--light);
-  padding-bottom: 5px;
+  padding-bottom: 10px;
+}
+
+.active {
+  padding-bottom: 10px;
+}
+
+.snap {
+  scroll-snap-type: y mandatory;
 }
 
 main {
   height: 100%;
 }
 
+.reveal {
+  animation: 1s reveal;
+  opacity: 1;
+}
+
 section {
   height: 100%;
+  opacity: 0;
+  padding-top: 75px;
 }
 
 .home {
   background-color: var(--purple);
+  background-image: url("../images/svgs/undraw_code_review_re_woeb.svg");
+  background-repeat: no-repeat;
+  background-position: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.home-content {
+  display: flex;
+  width: 50%;
+  height: 50%;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.75);
+  justify-content: center;
+  align-items: flex-start;
+  position: absolute;
+  right: 10%;
+  padding: 30px;
+  border-radius: 30px;
+  color: var(--dark);
+  box-shadow: 0 0 0 10px var(--dark);
+}
+
+.header {
+  font-size: 50px;
+  font-weight: 900;
+}
+
+.content {
+  font-size: 20px;
+}
+
+.socials {
+  height: 40px;
+  margin: 30px 0px;
+  display: flex;
+}
+
+.socials i {
+  height: 100%;
+  margin-right: 20px;
+  font-size: 35px;
+  transition: 0.25s;
+}
+
+.socials i:hover {
+  color: var(--purple);
+}
+
+.buttons {
+  display: flex;
+}
+
+.buttons button {
+  border: none;
+  border-radius: 10px;
+  height: 50px;
+  width: 100px;
+  margin-right: 20px;
+  background-color: var(--purple);
+  color: var(--light);
+  transition: 0.25s;
+  cursor: pointer;
+  border: 2px solid var(--purple);
+}
+
+.buttons button:hover {
+  background-color: var(--light);
+  color: var(--purple);
+  border: 2px solid var(--purple);
+}
+
+.skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/svgs/undraw_certificate_re_yadi.svg");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 75% 75%;
+  padding: 75px 30px 0px;
+  gap: 45px;
+}
+
+.skills-content {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: 80%;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.75);
+  box-shadow: 0 0 0 10px var(--dark);
+  border-radius: 30px;
+  padding: 30px;
+  overflow: hidden;
+}
+
+.skill-container {
+  display: flex;
+  gap: 30px;
+}
+
+.skill-container i {
+  background-color: var(--purple);
+  width: 60px;
+  aspect-ratio: 1;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--light);
+  font-size: 30px;
+  font-weight: 900;
+  padding: 0px 20px;
+}
+
+.skills-header {
+  font-size: 50px;
+  font-weight: 900;
+  color: var(--purple);
+}
+
+.skill-back {
+  width: 100%;
+  height: 30px;
+  border-radius: 30px;
+  background-color: #eee;
+  margin: auto;
+  overflow: hidden;
+}
+
+.skill-fill {
+  background-color: var(--purple);
+  height: 30px;
+  border-radius: 30px;
+  width: 0%;
+  transition: 1s;
+}
+
+.education-container {
+  width: 40%;
+  height: 80%;
+  background-color: rgba(255, 255, 255, 0.75);
+  box-shadow: 0 0 0 10px var(--dark);
+  border-radius: 30px;
+  padding: 30px;
+}
+
+.education-content {
+  padding: 10px 0px;
+}
+
+.education-content div {
+  color: var(--dark);
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.education-header {
+  font-size: 40px;
+  color: var(--purple);
+}
+
+.projects {
+  background-image: url("../images/svgs/undraw_portfolio_update_re_jqnp.svg");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 90% 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects-container {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.projects-content {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-header {
+  color: var(--purple);
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+
+.project-content {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.project-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 0 0 5px #222;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-image {
+  width: 100%;
+  aspect-ratio: 2;
+  background-size: 100%;
+  background-position: center;
+  box-shadow: 0 0 5px #ccc;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.project-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.small-buttons {
+  margin-top: auto;
+}
+
+.small-buttons i {
+  font-size: 20px;
+  transition: 0.25s color;
+}
+
+.small-buttons i:hover {
+  color: var(--purple);
 }
