@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="styles/reset.css">
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="js/index.js"></script>
 </head>
 
@@ -18,7 +19,7 @@
         <img src="images/AP_logo.png" alt="Logo">
         <span class="brand-name">{ Arpit Patel }</span>
         <div class="nav-links">
-            <div class="nav-link homeLink active"><a href="#home">Home</a></div>
+            <div class="nav-link homeLink"><a href="#home">Home</a></div>
             <div class="nav-link skillsLink"><a href="#skills">Skills</a></div>
             <div class="nav-link projectsLink"><a href="#projects">Projects</a></div>
             <div class="nav-link expLink"><a href="#experience">Experience</a></div>
@@ -103,49 +104,6 @@
         </section>
         <section id="projects" class="projects">
             <div class="projects-container">
-                <!-- Small Projects -->
-                <div class="projects-content">
-                    <div class="project-header">Small Projects</div>
-                    <div class="project-content">
-                        <div class="project-card">
-                            <div class="project-image" style="background-image: url('images/onboarding.png')"></div>
-                            <div class="project-title">Onboarding Form</div>
-                            <div class="project-description">A multi step form created using React</div>
-                            <div class="small-buttons">
-                                <a href="https://arpit194.github.io/OnboardingForm" target="_blank"><i class="fa-brands fa-safari"></i></a>
-                                <a href="https://github.com/arpit194/OnboardingForm" target="_blank"><i class="fa-brands fa-github"></i></a>
-                            </div>
-                        </div>
-                        <div class="project-card">
-                            <div class="project-image" style="background-image: url('images/socials.png')"></div>
-                            <div class="project-title">Social Buttons</div>
-                            <div class="project-description">A widget to help users share your website page on social media made using React</div>
-                            <div class="small-buttons">
-                                <a href="https://arpit194.github.io/SocialButtons" target="_blank"><i class="fa-brands fa-safari"></i></a>
-                                <a href="https://github.com/arpit194/SocialButtons" target="_blank"><i class="fa-brands fa-github"></i></a>
-                            </div>
-                        </div>
-                        <div class="project-card">
-                            <div class="project-image" style="background-image: url('images/matchpairs.png')"></div>
-                            <div class="project-title">Match Pair</div>
-                            <div class="project-description">A card matching memory game</div>
-                            <div class="small-buttons">
-                                <a href="https://arpit194.github.io/MatchPair" target="_blank"><i class="fa-brands fa-safari"></i></a>
-                                <a href="https://github.com/arpit194/MatchPair" target="_blank"><i class="fa-brands fa-github"></i></a>
-                            </div>
-                        </div>
-                        <div class="project-card">
-                            <div class="project-image" style="background-image: url('images/rolldice.png')"></div>
-                            <div class="project-title">Roll Dice</div>
-                            <div class="project-description">A simple dice roll to help you play your favourite board games anytime</div>
-                            <div class="small-buttons">
-                                <a href="https://arpit194.github.io/RollDice" target="_blank"><i class="fa-brands fa-safari"></i></a>
-                                <a href="https://github.com/arpit194/RollDice" target="_blank"><i class="fa-brands fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Big Projects -->
                 <div class="projects-content">
                     <div class="project-header">Big Projects</div>
@@ -158,6 +116,7 @@
                             <div class="small-buttons">
                                 <a href="https://arpit194.github.io/RollDice" target="_blank"><i class="fa-brands fa-safari"></i></a>
                                 <a href="https://github.com/arpit194/RollDice" target="_blank"><i class="fa-brands fa-github"></i></a>
+                                <i class="fa-solid fa-circle-info" style="margin-left: auto; z-index: 10;" onclick="revealDesc(this)"></i>
                             </div>
                         </div>
                         <div class="project-card">
@@ -168,6 +127,7 @@
                             <div class="small-buttons">
                                 <a href="https://arpit194.github.io/RollDice" target="_blank"><i class="fa-brands fa-safari"></i></a>
                                 <a href="https://github.com/arpit194/RollDice" target="_blank"><i class="fa-brands fa-github"></i></a>
+                                <i class="fa-solid fa-circle-info" style="margin-left: auto; z-index: 10;" onclick="revealDesc(this)"></i>
                             </div>
                         </div>
                         <div class="project-card">
@@ -178,6 +138,7 @@
                             <div class="small-buttons">
                                 <a href="https://arpit194.github.io/RollDice" target="_blank"><i class="fa-brands fa-safari"></i></a>
                                 <a href="https://github.com/arpit194/RollDice" target="_blank"><i class="fa-brands fa-github"></i></a>
+                                <i class="fa-solid fa-circle-info" style="margin-left: auto; z-index: 10;" onclick="revealDesc(this)"></i>
                             </div>
                         </div>
                         <div class="project-card">
@@ -188,14 +149,123 @@
                             <div class="small-buttons">
                                 <a href="https://arpit194.github.io/RollDice" target="_blank"><i class="fa-brands fa-safari"></i></a>
                                 <a href="https://github.com/arpit194/RollDice" target="_blank"><i class="fa-brands fa-github"></i></a>
+                                <i class="fa-solid fa-circle-info" style="margin-left: auto; z-index: 10;" onclick="revealDesc(this)"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Small Projects -->
+                <div class="projects-content">
+                    <div class="project-header">Small Projects</div>
+                    <div class="project-content">
+                        <div class="project-card">
+                            <div class="project-image" style="background-image: url('images/onboarding.png')"></div>
+                            <div class="project-title">Onboarding Form</div>
+                            <div class="project-description">A multi step form created using React</div>
+                            <div class="small-buttons">
+                                <a href="https://arpit194.github.io/OnboardingForm" target="_blank"><i class="fa-brands fa-safari"></i></a>
+                                <a href="https://github.com/arpit194/OnboardingForm" target="_blank"><i class="fa-brands fa-github"></i></a>
+                                <i class="fa-solid fa-circle-info" style="margin-left: auto; z-index: 10;" onclick="revealDesc(this)"></i>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-image" style="background-image: url('images/socials.png')"></div>
+                            <div class="project-title">Social Buttons</div>
+                            <div class="project-description">A widget to help users share your website page on social media made using React</div>
+                            <div class="small-buttons">
+                                <a href="https://arpit194.github.io/SocialButtons" target="_blank"><i class="fa-brands fa-safari"></i></a>
+                                <a href="https://github.com/arpit194/SocialButtons" target="_blank"><i class="fa-brands fa-github"></i></a>
+                                <i class="fa-solid fa-circle-info" style="margin-left: auto; z-index: 10;" onclick="revealDesc(this)"></i>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-image" style="background-image: url('images/matchpairs.png')"></div>
+                            <div class="project-title">Match Pair</div>
+                            <div class="project-description">A card matching memory game</div>
+                            <div class="small-buttons">
+                                <a href="https://arpit194.github.io/MatchPair" target="_blank"><i class="fa-brands fa-safari"></i></a>
+                                <a href="https://github.com/arpit194/MatchPair" target="_blank"><i class="fa-brands fa-github"></i></a>
+                                <i class="fa-solid fa-circle-info" style="margin-left: auto; z-index: 10;" onclick="revealDesc(this)"></i>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-image" style="background-image: url('images/rolldice.png')"></div>
+                            <div class="project-title">Roll Dice</div>
+                            <div class="project-description">A simple dice roll to help you play your favourite board games anytime</div>
+                            <div class="small-buttons">
+                                <a href="https://arpit194.github.io/RollDice" target="_blank"><i class="fa-brands fa-safari"></i></a>
+                                <a href="https://github.com/arpit194/RollDice" target="_blank"><i class="fa-brands fa-github"></i></a>
+                                <i class="fa-solid fa-circle-info" style="margin-left: auto; z-index: 10;" onclick="revealDesc(this)"></i>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="experience" class="experience">Experience</section>
-        <section id="contact" class="contact">Contact</section>
+        <section id="experience" class="experience">
+            <div class="experience-container">
+                <div class="experience-header">Experience</div>
+                <div class="experience-card" id="up">
+                    <div class="experience-title">Neuronwoods</div>
+                    <div class="experience-date">Jan 2020 - Jul 2020</div>
+                    <div class="experience-detail">
+                        <ul>
+                            <li>
+                                Working as a MERN stack developer 
+                            </li>
+                            <li>
+                                This is point 2 of the experience section.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-title">ReactEmo</div>
+                    <div class="experience-date">Aug 2020 - Oct 2020</div>
+                    <div class="experience-detail">
+                        <ul>
+                            <li>
+                                Working as a MERN stack developer 
+                            </li>
+                            <li>
+                                This is point 2 of the experience section.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="experience-card" id="down">
+                    <div class="experience-title">Accenture</div>
+                    <div class="experience-date">Feb 2021 - Present</div>
+                    <div class="experience-detail">
+                        <ul>
+                            <li>
+                                Working as a MERN stack developer 
+                            </li>
+                            <li>
+                                This is point 2 of the experience section.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="contact">
+            <div class="contact-container">
+                <div class="contact-image"></div>
+                <div class="contact-form">
+                    <div class="contact-title">Get in Touch</div>
+                    <input type="text" id="name" placeholder="Name" />
+                    <input type="email" id="email" placeholder="Email"/>
+                    <textarea rows="4" id="message" placeholder="Message"></textarea>
+                    <button id="submit" onclick="sendmail()">Send</button>
+                    <button id="wait" class="disabled" style="display: none;"><i class="fa-solid fa-spinner fa-2x fa-spin"></i></button>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <a href="mailto:arpit.patel194@gmail.com">arpit.patel194@gmail.com</a>
+        </footer>
     </main>
 </body>
 

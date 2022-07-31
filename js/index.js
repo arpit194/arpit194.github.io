@@ -21,31 +21,34 @@ const navColor = (el) => {
 
 const activeSection = (el) => {
   const length = $(el).scrollTop();
-  $(".homeLink").removeClass("active");
-  $(".skillsLink").removeClass("active");
-  $(".projectsLink").removeClass("active");
-  $(".expLink").removeClass("active");
-  $(".contactLink").removeClass("active");
+  //   $(".homeLink").removeClass("active");
+  //   $(".skillsLink").removeClass("active");
+  //   $(".projectsLink").removeClass("active");
+  //   $(".expLink").removeClass("active");
+  //   $(".contactLink").removeClass("active");
   if (length < $("body").height()) {
-    $(".homeLink").addClass("active");
+    // $(".homeLink").addClass("active");
     $(".home").addClass("reveal");
-  } else if (length >= $("body").height() && length < $("body").height() * 2) {
-    $(".skillsLink").addClass("active");
+  }
+  if (length >= $("body").height() - 100 && length < $("body").height() * 2) {
     $(".skills").addClass("reveal");
-  } else if (
-    length >= $("body").height() * 2 &&
+  }
+  if (
+    length >= $("body").height() * 2 - 100 &&
     length < $("body").height() * 3
   ) {
-    $(".projectsLink").addClass("active");
+    // $(".projectsLink").addClass("active");
     $(".projects").addClass("reveal");
-  } else if (
-    length >= $("body").height() * 3 &&
+  }
+  if (
+    length >= $("body").height() * 3 - 100 &&
     length < $("body").height() * 4
   ) {
-    $(".expLink").addClass("active");
+    // $(".expLink").addClass("active");
     $(".experience").addClass("reveal");
-  } else if (length >= $("body").height() * 4) {
-    $(".contactLink").addClass("active");
+  }
+  if (length >= $("body").height() * 4 - 100) {
+    // $(".contactLink").addClass("active");
     $(".contact").addClass("reveal");
   }
 };
@@ -66,4 +69,57 @@ const animateElements = (el) => {
     $(".react").css("width", "0%");
     $(".node").css("width", "0%");
   }
+  if (
+    length >= $("body").height() * 3 - 75 &&
+    length < $("body").height() * 4
+  ) {
+    $("#up").addClass("up");
+    $("#down").addClass("down");
+  }
+  if (
+    length <= ($("body").height() * 5) / 2 ||
+    length > ($("body").height() * 7) / 2
+  ) {
+    $("#up").removeClass("up");
+    $("#down").removeClass("down");
+  }
+};
+
+const sendmail = () => {
+  $("#submit").css("display", "none");
+  $("#wait").css("display", "block");
+  emailjs
+    .send(
+      "service_b54b9fb",
+      "template_i1798xh",
+      {
+        from_name: $("#name").val(),
+        message: $("#message").val(),
+        reply_to: $("#email").val(),
+      },
+      "HiBRwkdiSUfzDMP1V"
+    )
+    .then((res) => {
+      if (res.status == 200) {
+        $("#submit").css("display", "block");
+        $("#wait").css("display", "none");
+        $("#submit").html("Mail sent");
+        setTimeout(() => {
+          $("#submit").html("Send");
+        }, 2000);
+      } else {
+        $("#submit").css("display", "block");
+        $("#wait").css("display", "none");
+        $("#submit").html("Mail not sent");
+        setTimeout(() => {
+          $("#submit").html("Send");
+        }, 2000);
+      }
+    });
+};
+
+let revealDesc = (el) => {
+  if ($(el).parent().parent().children()[2].style.bottom === "-25%")
+    $(el).parent().parent().children()[2].style.bottom = "-100%";
+  else $(el).parent().parent().children()[2].style.bottom = "-25%";
 };

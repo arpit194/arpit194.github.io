@@ -100,7 +100,7 @@ section {
   width: 50%;
   height: 50%;
   flex-direction: column;
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.95);
   justify-content: center;
   align-items: flex-start;
   position: absolute;
@@ -178,7 +178,7 @@ section {
   width: 60%;
   height: 80%;
   justify-content: space-between;
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.95);
   box-shadow: 0 0 0 10px var(--dark);
   border-radius: 30px;
   padding: 30px;
@@ -224,13 +224,13 @@ section {
   height: 30px;
   border-radius: 30px;
   width: 0%;
-  transition: 1s;
+  transition: 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
 .education-container {
   width: 40%;
   height: 80%;
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.95);
   box-shadow: 0 0 0 10px var(--dark);
   border-radius: 30px;
   padding: 30px;
@@ -292,12 +292,14 @@ section {
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
   box-shadow: 0 0 0 5px #222;
-  padding: 10px;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: max-content;
   display: flex;
   flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  margin: auto 0;
 }
 
 .project-image {
@@ -313,10 +315,24 @@ section {
 .project-title {
   font-size: 20px;
   font-weight: bold;
+  padding: 0px 10px;
+}
+
+.project-description {
+  position: absolute;
+  height: 100%;
+  bottom: -100%;
+  padding: 0px 10px;
+  transition: 0.5s;
+  background-color: var(--light);
+  border-radius: 10px;
 }
 
 .small-buttons {
   margin-top: auto;
+  display: flex;
+  gap: 5px;
+  padding: 0px 10px;
 }
 
 .small-buttons i {
@@ -326,4 +342,165 @@ section {
 
 .small-buttons i:hover {
   color: var(--purple);
+}
+
+.experience {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/svgs/undraw_interaction_design_odgc.svg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 75% 75%;
+}
+
+.experience-container {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+}
+
+.experience-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--purple);
+}
+
+.experience-card {
+  height: 50%;
+  border: 5px solid var(--dark);
+  flex: 1;
+  border-radius: 30px;
+  top: 0;
+  position: relative;
+  transition: 1s;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.experience-title {
+  color: var(--purple);
+  font-size: 25px;
+  font-weight: bold;
+  margin: 10px 0px;
+}
+
+.experience-date {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.experience-detail {
+  flex: 1;
+}
+
+.experience-detail ul {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  height: 100%;
+}
+
+.up {
+  top: -15%;
+}
+
+.down {
+  top: 15%;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contact-container {
+  display: flex;
+  width: 90%;
+  height: 90%;
+}
+
+.contact-image {
+  background-image: url("../images/svgs/undraw_mail_re_duel.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 90% 90%;
+  flex: 1;
+}
+
+.contact-form {
+  height: 75%;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 30px;
+  box-shadow: 0 0 0 10px var(--dark);
+  flex: 1;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  padding: 30px;
+  justify-content: center;
+}
+
+.contact-title {
+  font-size: 30px;
+  color: var(--purple);
+  font-weight: bold;
+}
+
+.contact-form input {
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  background-color: #eee;
+  margin: 10px 0px;
+  padding: 10px 30px;
+}
+
+.contact-form textarea {
+  height: 100px;
+  padding: 10px 30px;
+  border-radius: 25px;
+  border: none;
+  background-color: #eee;
+  margin: 10px 0px;
+}
+
+.disabled {
+  border: 2px solid #ccc !important;
+  background-color: #ccc !important;
+  color: var(--light) !important;
+}
+
+.contact-form button {
+  height: 50px;
+  border-radius: 25px;
+  background-color: var(--purple);
+  color: var(--light);
+  margin: 10px 0px;
+  border: 2px solid var(--purple);
+  transition: 0.25s;
+}
+
+.contact-form button:hover {
+  background-color: var(--light);
+  color: var(--purple);
+  border: 2px solid var(--purple);
+}
+
+footer {
+  padding: 10px 30px;
+  background-color: var(--purple);
+  color: var(--light);
+  font-weight: bold;
+  text-align: center;
 }
