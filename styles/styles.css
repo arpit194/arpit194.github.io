@@ -22,7 +22,7 @@
   position: fixed;
   color: var(--light);
   transition: 0.25s;
-  z-index: 1;
+  z-index: 10;
 }
 
 .scrolledSome {
@@ -321,8 +321,9 @@ section {
 .project-description {
   position: absolute;
   height: 100%;
+  width: 100%;
   bottom: -100%;
-  padding: 0px 10px;
+  padding: 10px;
   transition: 0.5s;
   background-color: var(--light);
   border-radius: 10px;
