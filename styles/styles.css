@@ -87,11 +87,7 @@
 }
 
 .nav-link:hover {
-  padding-bottom: 10px;
-}
-
-.active {
-  padding-bottom: 10px;
+  color: #ccc;
 }
 
 .snap {
@@ -250,7 +246,7 @@ section {
 
 .skill-fill {
   background-color: var(--purple);
-  height: 30px;
+  height: 100%;
   border-radius: 30px;
   width: 0%;
   transition: 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
@@ -533,4 +529,173 @@ footer {
   color: var(--light);
   font-weight: bold;
   text-align: center;
+}
+
+/* phone */
+@media only screen and (min-width: 0px) and (max-width: 480px) {
+  .home {
+    background-size: 75%;
+    background-position: bottom;
+  }
+
+  .nav {
+    padding: 10px;
+    height: 50px;
+  }
+
+  .nav-links {
+    font-size: 10px;
+    margin: none;
+  }
+
+  .brand-name {
+    display: none;
+  }
+
+  .home-content {
+    position: initial;
+    width: 90%;
+    height: 75%;
+  }
+
+  .header {
+    font-size: 30px;
+    font-weight: 900;
+  }
+
+  .buttons button {
+    height: 50px;
+    width: 100px;
+  }
+
+  .skills {
+    background-size: 75%;
+    padding: 75px 30px 0px;
+    gap: 30px;
+    flex-direction: column;
+    padding: 95px 30px 20px;
+    background-position: 0 100%;
+  }
+
+  .skills-header {
+    font-size: 25px;
+  }
+
+  .skills-content {
+    width: 100%;
+    height: 47%;
+    padding: 10px;
+  }
+
+  .skill-container {
+    gap: 10px;
+  }
+
+  .skill-container i {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--light);
+    font-size: 20px;
+    font-weight: 900;
+    padding: 10px;
+  }
+
+  .skill-back {
+    width: 100%;
+    height: 15px;
+    border-radius: 30px;
+    background-color: #eee;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .education-container {
+    width: 100%;
+    height: 47%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .education-content {
+    margin: auto 0;
+  }
+
+  .class12 {
+    display: none;
+  }
+
+  .class10 {
+    display: none;
+  }
+
+  .experience {
+    background-position: bottom;
+    background-size: 100%;
+  }
+
+  .experience-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .experience-header {
+    position: initial;
+    width: 100%;
+  }
+
+  .experience-title {
+    margin: 0px;
+  }
+
+  .experience-card {
+    width: 100%;
+    padding: 10px;
+    overflow: auto;
+  }
+
+  .up {
+    top: 0;
+  }
+
+  .down {
+    top: 0;
+  }
+
+  .contact {
+    padding: 75px 10px 0px;
+  }
+
+  .contact-image {
+    display: none;
+  }
+
+  .contact-form {
+    width: 90%;
+    height: 85%;
+    padding: 15px;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .nav {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 993px) {
+  .nav {
+    display: none;
+  }
 }
