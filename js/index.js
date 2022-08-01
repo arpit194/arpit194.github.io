@@ -62,6 +62,12 @@ const animateElements = (el) => {
     $(".react").css("width", "85%");
     $(".node").css("width", "85%");
   }
+  if (length >= $("body").height() * 0.5) {
+    $("#top").addClass("reveal-top");
+  }
+  if (length < $("body").height() * 0.5) {
+    $("#top").removeClass("reveal-top");
+  }
   if (length <= $("body").height() / 2 || length > $("body").height() * 2) {
     $(".html").css("width", "0%");
     $(".css").css("width", "0%");

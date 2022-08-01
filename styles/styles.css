@@ -13,6 +13,35 @@
   }
 }
 
+.back-to-top {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+  font-size: 45px;
+  background-color: var(--purple);
+  color: white;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  display: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.back-to-top:hover {
+  color: var(--purple);
+  background-color: var(--light);
+}
+
+.reveal-top {
+  display: flex;
+  animation: 0.25s reveal;
+}
+
 .nav {
   background-color: transparent;
   width: 100%;
