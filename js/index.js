@@ -124,8 +124,88 @@ const sendmail = () => {
     });
 };
 
-let revealDesc = (el) => {
+const revealDesc = (el) => {
   if ($(el).parent().parent().children()[2].style.bottom === "-25%")
     $(el).parent().parent().children()[2].style.bottom = "-100%";
   else $(el).parent().parent().children()[2].style.bottom = "-25%";
+};
+
+const navMenu = () => {
+  if ($(".nav-menu-responsive").hasClass("nav-open")) {
+    $(".nav-menu-responsive").removeClass("nav-open");
+  } else {
+    $(".nav-menu-responsive").addClass("nav-open");
+  }
+};
+
+const carouselSlide = (direction) => {
+  const projects = Object.values($(".project-card-responsive"));
+  projects.splice(-2);
+  let current = 0;
+  projects.forEach((project, n) => {
+    if (project.classList.contains("active-project")) {
+      current = n;
+      project.classList.remove("active-project");
+      project.classList.remove("slide-left");
+      project.classList.remove("slide-right");
+    }
+  });
+  if (direction === "right") {
+    if (current === 3) {
+      current = 0;
+    } else {
+      current += 1;
+    }
+    projects[current].classList.add("slide-left");
+    setTimeout(() => {
+      projects[current].classList.add("active-project");
+    }, 100);
+  }
+  if (direction === "left") {
+    if (current === 0) {
+      current = 3;
+    } else {
+      current -= 1;
+    }
+    projects[current].classList.add("slide-right");
+    setTimeout(() => {
+      projects[current].classList.add("active-project");
+    }, 100);
+  }
+};
+
+const carouselSlideSmall = (direction) => {
+  const projects = Object.values($(".project-small-card-responsive"));
+  projects.splice(-2);
+  let current = 0;
+  projects.forEach((project, n) => {
+    if (project.classList.contains("active-project")) {
+      current = n;
+      project.classList.remove("active-project");
+      project.classList.remove("slide-left");
+      project.classList.remove("slide-right");
+    }
+  });
+  if (direction === "right") {
+    if (current === 3) {
+      current = 0;
+    } else {
+      current += 1;
+    }
+    projects[current].classList.add("slide-left");
+    setTimeout(() => {
+      projects[current].classList.add("active-project");
+    }, 100);
+  }
+  if (direction === "left") {
+    if (current === 0) {
+      current = 3;
+    } else {
+      current -= 1;
+    }
+    projects[current].classList.add("slide-right");
+    setTimeout(() => {
+      projects[current].classList.add("active-project");
+    }, 100);
+  }
 };

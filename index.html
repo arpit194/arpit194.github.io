@@ -25,6 +25,16 @@
             <div class="nav-link expLink"><a href="#experience">Experience</a></div>
             <div class="nav-link contactLink"><a href="#contact">Contact</a></div>
         </div>
+        <div class="nav-menu-button" style="display: none;"><i class="fa-solid fa-bars" onclick="navMenu()"></i></div>
+        <div class="nav-menu-responsive" style="display: none;">
+            <div class="nav-links-responsive"  onclick="navMenu()">
+                <div class="nav-link homeLink"><a href="#home">Home</a></div>
+                <div class="nav-link skillsLink"><a href="#skills">Skills</a></div>
+                <div class="nav-link projectsLink"><a href="#projects">Projects</a></div>
+                <div class="nav-link expLink"><a href="#experience">Experience</a></div>
+                <div class="nav-link contactLink"><a href="#contact">Contact</a></div>
+            </div>
+        </div>
     </nav>
     <div class="back-to-top" id="top">
         <i class="fa-solid fa-circle-up" onclick="$(window).scrollTop(0)"></i>
@@ -44,7 +54,7 @@
                             class="fa-brands fa-instagram"></i></a>
                 </div>
                 <div class="buttons">
-                    <button>Contact</button>
+                    <button><a href="#contact">Contact</a></button>
                     <button>Resume</button>
                 </div>
             </div>
@@ -110,6 +120,57 @@
                 <!-- Big Projects -->
                 <div class="projects-content">
                     <div class="project-header">Projects</div>
+                    <!-- Responsive Projects -->
+                    <div class="project-carousel" style="display: none;">
+                        <div class="carousel-control left-control" onclick="carouselSlide('left')">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </div>
+                        <div class="carousel-control right-control" onclick="carouselSlide('right')">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                        <div class="project-card-responsive active-project"> 
+                            <div class="project-image-responsive" style="background-image: url('images/expense.png')"></div>
+                            <div class="project-title-responsive">Expense Tracker</div>
+                            <div class="project-description">An expense tracker to keep your spendings in check</div>
+                            <div class="small-buttons-responsive">
+                                <a href="https://arpit194.github.io/ExpenseTracker" target="_blank"><i class="fa-solid fa-link"></i></a>
+                                <a href="https://github.com/arpit194/ExpenseTracker" target="_blank"><i class="fa-brands fa-github"></i></a>
+                                <i class="fa-solid fa-circle-info" style="margin-left: auto; z-index: 5;" onclick="revealDesc(this)"></i>
+                            </div>
+                        </div>
+                        <div class="project-card-responsive"> 
+                            <div class="project-image-responsive" style="background-image: url('images/quizard.png')"></div>
+                            <div class="project-title-responsive">Quizard</div>
+                            <div class="project-description">A trivia game to test yout knowledge where you can chose from multiple topics and difficulties.</div>
+                            <div class="small-buttons-responsive">
+                                <a href="https://arpit194.github.io/ExpenseTracker" target="_blank"><i class="fa-solid fa-link"></i></a>
+                                <a href="https://github.com/arpit194/ExpenseTracker" target="_blank"><i class="fa-brands fa-github"></i></a>
+                                <i class="fa-solid fa-circle-info" style="margin-left: auto; z-index: 5;" onclick="revealDesc(this)"></i>
+                            </div>
+                        </div>
+                        <div class="project-card-responsive"> 
+                            <div class="project-image-responsive" style="background-image: url('images/grocery.png')"></div>
+                            <div class="project-title-responsive">Grocery</div>
+                            <div class="project-description">A single solution to all your grocery needs.</div>
+                            <div class="small-buttons-responsive">
+                                <a href="https://arpit194.github.io/ExpenseTracker" target="_blank"><i class="fa-solid fa-link"></i></a>
+                                <a href="https://github.com/arpit194/ExpenseTracker" target="_blank"><i class="fa-brands fa-github"></i></a>
+                                <i class="fa-solid fa-circle-info" style="margin-left: auto; z-index: 5;" onclick="revealDesc(this)"></i>
+                            </div>
+                        </div>
+                        <div class="project-card-responsive"> 
+                            <div class="project-image-responsive" style="background-image: url('images/upcoming.jpg')"></div>
+                            <div class="project-title-responsive">PingIt (In development)</div>
+                            <div class="project-description">A real time chat application using socket.io, NodeJs and React</div>
+                            <div class="small-buttons-responsive">
+                                <a href="https://arpit194.github.io/ExpenseTracker" target="_blank"><i class="fa-solid fa-link"></i></a>
+                                <a href="https://github.com/arpit194/ExpenseTracker" target="_blank"><i class="fa-brands fa-github"></i></a>
+                                <i class="fa-solid fa-circle-info" style="margin-left: auto; z-index: 5;" onclick="revealDesc(this)"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    
                     <div class="project-content">
                         <div class="project-card">
                             <div class="project-image" style="background-image: url('images/expense.png')"></div>
@@ -157,6 +218,56 @@
                 <!-- Small Projects -->
                 <div class="projects-content">
                     <div class="project-header">Small Projects</div>
+                    <!-- Responsive Projects -->
+                    <div class="project-carousel" style="display: none;">
+                        <div class="carousel-control left-control" onclick="carouselSlideSmall('left')">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </div>
+                        <div class="carousel-control right-control" onclick="carouselSlideSmall('right')">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                        <div class="project-small-card-responsive active-project"> 
+                            <div class="project-image-responsive" style="background-image: url('images/onboarding.png')"></div>
+                            <div class="project-title-responsive">Onboarding Form</div>
+                            <div class="project-description">A multi step form created using React</div>
+                            <div class="small-buttons-responsive">
+                                <a href="https://arpit194.github.io/OnboardingForm" target="_blank"><i class="fa-solid fa-link"></i></a>
+                                <a href="https://github.com/arpit194/OnboardingForm" target="_blank"><i class="fa-brands fa-github"></i></a>
+                                <i class="fa-solid fa-circle-info" style="margin-left: auto; z-index: 5;" onclick="revealDesc(this)"></i>
+                            </div>
+                        </div>
+                        <div class="project-small-card-responsive"> 
+                            <div class="project-image-responsive" style="background-image: url('images/socials.png')"></div>
+                            <div class="project-title-responsive">Social Buttons</div>
+                            <div class="project-description">A widget to help users share your website page on social media made using React</div>
+                            <div class="small-buttons-responsive">
+                                <a href="https://arpit194.github.io/SocialButtons" target="_blank"><i class="fa-solid fa-link"></i></a>
+                                <a href="https://github.com/arpit194/SocialButtons" target="_blank"><i class="fa-brands fa-github"></i></a>
+                                <i class="fa-solid fa-circle-info" style="margin-left: auto; z-index: 5;" onclick="revealDesc(this)"></i>
+                            </div>
+                        </div>
+                        <div class="project-small-card-responsive"> 
+                            <div class="project-image-responsive" style="background-image: url('images/matchpairs.png')"></div>
+                            <div class="project-title-responsive">Match Pair</div>
+                            <div class="project-description">A card matching memory game</div>
+                            <div class="small-buttons-responsive">
+                                <a href="https://arpit194.github.io/MatchPair" target="_blank"><i class="fa-solid fa-link"></i></a>
+                                <a href="https://github.com/arpit194/MatchPair" target="_blank"><i class="fa-brands fa-github"></i></a>
+                                <i class="fa-solid fa-circle-info" style="margin-left: auto; z-index: 5;" onclick="revealDesc(this)"></i>
+                            </div>
+                        </div>
+                        <div class="project-small-card-responsive"> 
+                            <div class="project-image-responsive" style="background-image: url('images/rolldice.png')"></div>
+                            <div class="project-title-responsive">Roll Dice</div>
+                            <div class="project-description">A simple dice roll to help you play your favourite board games anytime</div>
+                            <div class="small-buttons-responsive">
+                                <a href="https://arpit194.github.io/RollDice" target="_blank"><i class="fa-solid fa-link"></i></a>
+                                <a href="https://github.com/arpit194/RollDice" target="_blank"><i class="fa-brands fa-github"></i></a>
+                                <i class="fa-solid fa-circle-info" style="margin-left: auto; z-index: 5;" onclick="revealDesc(this)"></i>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="project-content">
                         <div class="project-card">
                             <div class="project-image" style="background-image: url('images/onboarding.png')"></div>
