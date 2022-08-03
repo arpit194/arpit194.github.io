@@ -674,6 +674,11 @@ footer {
     display: none;
   }
 
+  .projects {
+    background-position: bottom;
+    background-size: 90%;
+  }
+
   .project-content {
     display: none;
   }
